@@ -12,14 +12,21 @@ void main() {
   print("Turning TV on...");
   tv.toggleOn();
   if (tv.isOn) {
-    print("TV is on");
+    print("TV is on!");
   } else {
     print("TV is still off. Something went wrong.");
   }
-  print("Current Channel is " + tv.channel.id.toString() + " - " + tv.channel.name);
+  print("Current Channel is ${tv.channel.id.toString()} (${tv.channel.name})");
   print("Setting TV channel to " + TVChannel.CARTOON_NETWORK.name + "...");
   tv.channel = TVChannel.CARTOON_NETWORK;
-  print("Current Channel is " + tv.channel.id.toString() + " - " + tv.channel.name);
+  print("Current Channel is " +
+      tv.channel.id.toString() +
+      " (" +
+      tv.channel.name +
+      ")");
+    var nullVar = null;
+    if (nullVar is Instance)
+  print(nullVar);
 }
 
 dynamic a = 1;
