@@ -8,6 +8,17 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
-export default function Home() {
-  return <Welcome />;
+export async function loader({ context: _context }: Route.LoaderArgs) {
+  // This loader function is intentionally left empty.
+  const promise: Promise<string> = new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Hello from Controllab");
+    }, 3500);
+  });
+
+  return {message: promise};
+}
+
+export default function Home({loaderData}: Route.ComponentProps) {
+  return <Welcome message={loaderData.message} />;
 }
