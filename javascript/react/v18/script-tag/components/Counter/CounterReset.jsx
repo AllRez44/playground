@@ -1,14 +1,14 @@
-function CounterReset({style}) {
+function CounterReset(props) {
+  const {className, ...otherProps} = props 
   const { reset } = useCounter()
 
   return (
     <Button
       onClick={reset}
-      style={{
-        backgroundColor: "#6c757d",
-      ...style
-    }}>
+      className={"!bg-[#6c757d] " + className}
+      {...otherProps}
+    >
       Reset
     </Button>
-  )
+  );
 }

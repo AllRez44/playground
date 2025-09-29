@@ -1,26 +1,18 @@
-function CounterControls({ style }) {
+function CounterControls(props) {
+  const { className, ...otherProps } = props
   const { increment, decrement } = useCounter()
   
   return (
     <div
-      style={{
-        display: "flex",
-        gap: "8px",
-        ...style,
-      }}
+      className={"flex w-full items-center gap-2 " + className}
+      {...otherProps}
     >
-      <Button
-        onClick={decrement}
-        style={{
-          backgroundColor: "#dc3545",
-        }}
-      >-</Button>
-      <Button
-        onClick={increment}
-        style={{
-          backgroundColor: "#007bff",
-        }}
-      >+</Button>
+      <Button className="!bg-red-600 flex-1" onClick={decrement}>
+        -
+      </Button>
+      <Button className="!bg-blue-600 flex-1" onClick={increment}>
+        +
+      </Button>
     </div>
   );
 }

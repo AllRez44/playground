@@ -15,7 +15,10 @@ class LikeButton extends React.Component {
 
     return e(
       'button',
-      { onClick: () => this.setState({ liked: true }) },
+      {
+        className: 'py-1 px-3 bg-black hover:opacity-80 text-white font-semibold rounded border-none cursor-pointer',
+        onClick: () => this.setState({ liked: true }),
+      },
       'Like'
     );
   }

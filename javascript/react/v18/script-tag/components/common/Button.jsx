@@ -1,20 +1,9 @@
 function Button(props) {
-  const { style, ...otherProps} = props
+  const { className, ...otherProps} = props
   return (
     <button
-      style={{
-        padding: "4px 16px",
-        backgroundColor: "#000000",
-        color: "#FFFFFF",
-        fontWeight: 600,
-        border: "none",
-        borderRadius: "4px",
-        cursor: "pointer",
-        ...style
-      }}
-      {
-        ...otherProps
-      }
+      className={"py-1 px-4 bg-black text-white font-semibold rounded border-none cursor-pointer " + className}
+      {...otherProps}
     />
   );
 }
