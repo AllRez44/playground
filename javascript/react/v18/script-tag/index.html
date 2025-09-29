@@ -15,8 +15,21 @@
     <!-- We will put our React component inside this div. -->
     <div id="like_button_container"></div>
 
-    <!-- Load React. -->
-    <!-- Load our React component. -->
-    <script defer src="index.js" type="text/babel" data-type="module"></script>
+    <!-- Load Context first. -->
+    <script defer src="./context/CounterContext.js" type="text/babel"></script>
+
+    <!-- Load Components. -->
+    <script defer src="./components/common/Button.jsx" type="text/babel"></script>
+
+    <script defer src="./components/Counter/Counter.jsx" type="text/babel"></script>
+    <script defer src="./components/Counter/CounterControls.jsx" type="text/babel"></script>
+    <script defer src="./components/Counter/CounterReset.jsx" type="text/babel"></script>
+
+    <script defer src="./components/LikeButton.js" type="text/babel"></script>
+    <script defer src="./components/Home.jsx" type="text/babel"></script>
+    <script defer src="./components/App.jsx" type="text/babel"></script>
+
+    <!-- Load main app file last -->
+    <script defer src="index.js" type="text/babel"></script>
   </body>
 </html>
